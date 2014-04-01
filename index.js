@@ -4,9 +4,11 @@ module.exports = function(root) {
   var makeJade = (require('./lib/processor/jade'))(root);
   var makeLess = (require('./lib/processor/less'))(root);
   var homepage = require('./lib/processor/homepage');
+  var reject = require('./lib/processor/reject');
 
   var app = connect()
     .use(homepage)
+    .use(reject)
     .use(function(request, response, next) {
       var url = request.url.split("/");
 
