@@ -2,7 +2,6 @@
 
 var miniHarp = require("../index");
 
-
 var argv = require('minimist')(process.argv.slice(2));
 
 var root = argv._[0]  || process.cwd();
