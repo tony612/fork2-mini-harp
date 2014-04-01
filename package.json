@@ -1,0 +1,17 @@
+{
+  "name": "mini-harp",
+  "version": "0.0.0",
+  "description": "A mini harp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "mini-harp": "./bin/mini-harp.js"
+  },
+  "author": "Tony Han",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.0.0-rc.1"
+  }
+}
