@@ -3,8 +3,10 @@ module.exports = function(root) {
   var serveStatic = require('serve-static');
   var makeJade = (require('./lib/processor/jade'))(root);
   var makeLess = (require('./lib/processor/less'))(root);
+  var homepage = require('./lib/processor/homepage');
 
   var app = connect()
+    .use(homepage)
     .use(function(request, response, next) {
       var url = request.url.split("/");
 
